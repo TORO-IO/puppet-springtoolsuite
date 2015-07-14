@@ -1,10 +1,10 @@
 
 class springtoolsuite {
 	
-	$tar_filename = 'spring-tool-suite-3.2.0.RELEASE-e3.8.2-macosx-cocoa-x86_64.tar.gz'
+	$tar_filename = 'spring-tool-suite-3.7.0.RELEASE-e4.5-macosx-cocoa-x86_64.tar.gz'
 
 	exec {"curl_springtoolsuite":
-            command => "/usr/bin/curl -O http://download.springsource.com/release/STS/3.2.0/dist/e3.8/$tar_filename",
+            command => "/usr/bin/curl -O http://dist.springsource.com/release/STS/3.7.0.RELEASE/dist/e4.5/$tar_filename",
             unless  => "test -f /tmp/${tar_filename} -o -d /Applications/springsource",
             cwd     => "/tmp",
             timeout => 0
